@@ -1,0 +1,19 @@
+{
+  "name": "grifflaw-website",
+  "version": "1.0.0",
+  "description": "Local law website for Grifflaw",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=8000 --open=index.html",
+    "serve": "http-server -p 8000 -o",
+    "dev": "live-server --port=8000 --open=index.html --watch=."
+  },
+  "keywords": [
+    "law",
+    "website",
+    "legal",
+    "services"
+  ],
+  "author": "",
+  "license": "ISC"
+}
