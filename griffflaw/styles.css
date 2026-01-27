@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+
+:root {
+  /* Primary Colors - Blues */
+  --navy-blue: #1e3a5f;
+  --dark-blue: #2c5282;
+  --off-blue: #4a7ba7;
+  --steel-blue: #4299e1;
+  
+  /* Neutral Grays */
+  --charcoal-gray: #2d3748;
+  --medium-gray: #718096;
+  --light-gray: #f7fafc;
+  --slate-gray: #cbd5e0;
+  --off-white: #ffffff;
+  
+  /* Gradients */
+  --grad-navy: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+  --grad-blue: linear-gradient(135deg, #2c5282 0%, #4a7ba7 100%);
+  --grad-glass: rgba(255, 255, 255, 0.85);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,0.12);
+  
+  /* Text Colors */
+  --text-primary: var(--charcoal-gray);
+  --text-secondary: var(--medium-gray);
+  --text-heading: var(--navy-blue);
+  
+  /* Background Colors */
+  --bg-primary: var(--off-white);
+  --bg-secondary: var(--light-gray);
+  --bg-card: #ffffff;
+  
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================================
+   Typography
+   ======================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--text-heading);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+}
+
+/* ========================================
+   Links
+   ======================================== */
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+  border-bottom: 1px solid var(--link-hover);
+}
+
+/* ========================================
+   Header / Navigation
+   ======================================== */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--grad-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1rem 2rem;
+  transition: var(--transition-base);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav a {
+  color: var(--navy-blue);
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: var(--transition-fast);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--off-blue);
+  transition: var(--transition-base);
+}
+
+nav a:hover {
+  color: var(--off-blue);
+  border-bottom: none;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ========================================
+   Buttons
+   ======================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  border: none;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background: var(--grad-navy);
+  color: white !important;
+}
+
+.btn-primary:hover {
+  background: var(--grad-blue);
+  box-shadow: 0 8px 20px rgba(30, 58, 95, 0.25);
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--navy-blue) !important;
+  border: 1px solid var(--slate-gray);
+}
+
+.btn-secondary:hover {
+  background: var(--light-gray);
+  border-color: var(--navy-blue);
+}
+/* ========================================
+   Main Content Area
+   ======================================== */
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+section {
+  margin-bottom: 6rem;
+}
+
+/* ========================================
+   Hero Section
+   ======================================== */
+
+.hero {
+  background: var(--grad-navy);
+  color: white;
+  padding: 8rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(74, 123, 167, 0.2) 0%, transparent 70%);
+}
+
+.hero h1 {
+  color: white;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+}
+
+.hero p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+}
+
+/* ========================================
+   Blog Post & Cards
+   ======================================== */
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.5rem;
+}
+
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--off-blue);
+}
+
+.blog-card h3 {
+  margin: 1rem 0;
+  min-height: 3.6rem;
+}
+
+.blog-card .btn {
+  align-self: flex-start;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+}
+
+/* ========================================
+   Author Bio
+   ======================================== */
+
+.author-bio {
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 6rem;
+  box-shadow: var(--shadow-md);
+}
+
+.author-bio img {
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: var(--shadow-md);
+}
+
+.author-bio h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+
+footer {
+  background-color: var(--navy-blue);
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+footer h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+footer a {
+  color: white;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+footer a:hover {
+  opacity: 1;
+}
+
+/* ========================================
+   Utility & Responsive
+   ======================================== */
+
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.text-gray { color: var(--text-secondary); }
+
+@media (max-width: 768px) {
+  nav { gap: 1.5rem; }
+  .hero { padding: 6rem 1rem; }
+  .author-bio {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+}
+
+/* ========================================
+   Practice Areas Section
+   ======================================== */
+
+.practice-areas {
+    padding: 8rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.area-card {
+    background: white;
+    padding: 4rem 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.03);
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.area-card:hover {
+    transform: translateY(-12px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--off-blue);
+}
+
+.area-icon {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+}
+
+.area-card h3 {
+    margin-bottom: 1.25rem;
+    color: var(--navy-blue);
+    font-size: 1.75rem;
+}
+
+.area-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Griffiths Law - Criminal Defense Attorney</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero {
+            background-color: var(--navy-blue);
+            color: var(--off-white);
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            color: var(--off-white);
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--light-gray);
+            margin-top: 1rem;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/blog">Insights</a>
+            <a href="/about">Attorney Profile</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Justice & Constitutional Advocacy</h1>
+        <p>Premium Criminal Defense serving Montgomery and Chester Counties. Expert analysis. Relentless advocacy.</p>
+        <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+            <a href="/contact" class="btn btn-primary">Schedule Consultation</a>
+            <a href="/blog" class="btn btn-secondary">Read Insights</a>
+        </div>
+    </section>
+
+    <section class="practice-areas">
+        <div class="section-title">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Practice Excellence</h2>
+            <p class="text-gray">Serving Montgomery and Chester Counties with dedicated legal expertise.</p>
+        </div>
+        <div class="areas-grid">
+            <div class="area-card">
+                <div class="area-icon">⚖️</div>
+                <h3>DUI Defense</h3>
+                <p>Comprehensive defense strategies for driving under the influence charges, from ARD to high-tier refusals.</p>
+            </div>
+            <div class="area-card">
+                <div class="area-icon">🛡️</div>
+                <h3>Constitutional Rights</h3>
+                <p>Aggressive protection of your Fourth, Fifth, and Sixth Amendment rights against government overreach.</p>
+            </div>
+            <div class="area-card">
+                <div class="area-icon">📂</div>
+                <h3>Criminal Defense</h3>
+                <p>Expert representation for a wide range of Pennsylvania criminal charges, ensuring your future is protected.</p>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section>
+            <div class="section-title">
+                <h2>Latest Legal Insights</h2>
+                <p class="text-gray">Deep dives into Pennsylvania Supreme Court rulings and criminal law.</p>
+            </div>
+
+            <div class="blog-grid">
+                <!-- Blog Card 1: Hunte Case -->
+                <div class="card blog-card">
+                    <div class="card-content">
+                        <span style="color: var(--off-blue); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Constitutional Law</span>
+                        <h3>Commonwealth v. Hunte: Warrantless Blood Draws</h3>
+                        <p class="text-gray">A landmark PA Supreme Court ruling on the Fourth Amendment rights of unconscious suspects.</p>
+                    </div>
+                    <div style="margin-top: auto; padding-top: 2rem;">
+                        <a href="blog_posts/commonwealth-v-hunte-warrantless-dui-blood-draws.html" class="btn btn-primary">Read Case Review</a>
+                    </div>
+                </div>
+
+                <!-- Blog Card 2: Shiflett Case -->
+                <div class="card blog-card">
+                    <div class="card-content">
+                        <span style="color: var(--off-blue); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">DUI Defense</span>
+                        <h3>Commonwealth v. Shiflett: ARD & Sentencing</h3>
+                        <p class="text-gray">Analyzing how ARD acceptance impacts mandatory minimums in DUI enhancements.</p>
+                    </div>
+                    <div style="margin-top: auto; padding-top: 2rem;">
+                        <a href="#" class="btn btn-secondary" style="opacity: 0.6; cursor: not-allowed;">Analysis Pending</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="author-bio">
+            <img src="images/steve-griffiths-headshot.png" alt="Attorney Steve Griffiths" width="180" height="180">
+            <div>
+                <h3>Steve Griffiths</h3>
+                <p class="author-tagline" style="color: var(--navy-blue); font-weight: 600; margin-bottom: 0.5rem;">Criminal Defense Attorney | PA Bar #XXXXX</p>
+                <p>Dedicated to protecting constitutional rights across Montgomery and Chester Counties. Steve specializes in high-stakes criminal defense with a focus on DUI and Fourth Amendment litigation.</p>
+                <div style="margin-top: 1.5rem;">
+                    <a href="/about" class="btn btn-secondary">Full Profile &rarr;</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h3>GRIFFITHS LAW</h3>
+            <p>Providing aggressive defense for the accused across Pennsylvania.</p>
+            <div style="margin: 3rem 0; display: flex; gap: 2rem; justify-content: center;">
+                <a href="/contact">Contact</a>
+                <a href="/blog">Legal Blog</a>
+                <a href="/privacy">Privacy Policy</a>
+            </div>
+            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.4);">
+                © 2026 Griffiths Law. All professional photographs by [Photographer Name].
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
